@@ -1,0 +1,81 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:R R1
+U 1 1 606A41FF
+P 5100 3250
+F 0 "R1" V 4893 3250 50  0000 C CNN
+F 1 "500" V 4984 3250 50  0000 C CNN
+F 2 "" V 5030 3250 50  0001 C CNN
+F 3 "~" H 5100 3250 50  0001 C CNN
+	1    5100 3250
+	0    1    1    0   
+$EndComp
+$Comp
+L pspice:0 #GND?
+U 1 1 606A5092
+P 5200 4150
+F 0 "#GND?" H 5200 4050 50  0001 C CNN
+F 1 "0" H 5200 4239 50  0000 C CNN
+F 2 "" H 5200 4150 50  0001 C CNN
+F 3 "~" H 5200 4150 50  0001 C CNN
+	1    5200 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L pspice:VSOURCE V1
+U 1 1 606A587F
+P 4550 3650
+F 0 "V1" H 4778 3696 50  0000 L CNN
+F 1 "10V" H 4778 3605 50  0000 L CNN
+F 2 "" H 4550 3650 50  0001 C CNN
+F 3 "~" H 4550 3650 50  0001 C CNN
+	1    4550 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4550 3350 4550 3250
+Wire Wire Line
+	4550 3250 4950 3250
+Wire Wire Line
+	5250 3250 5750 3250
+Wire Wire Line
+	5750 3250 5750 3450
+Wire Wire Line
+	5750 3850 5750 3950
+Wire Wire Line
+	5750 3950 5200 3950
+Wire Wire Line
+	5200 4150 5200 3950
+Connection ~ 5200 3950
+Wire Wire Line
+	5200 3950 4550 3950
+$Comp
+L pspice:DIODE D1
+U 1 1 606A67A5
+P 5750 3650
+F 0 "D1" V 5704 3778 50  0000 L CNN
+F 1 "1N4148" V 5795 3778 50  0000 L CNN
+F 2 "" H 5750 3650 50  0001 C CNN
+F 3 "~" H 5750 3650 50  0001 C CNN
+F 4 "X" H 5750 3650 50  0001 C CNN "Spice_Primitive"
+F 5 "1N4148" H 5750 3650 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 5750 3650 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "1N4148_2.lib" H 5750 3650 50  0001 C CNN "Spice_Lib_File"
+	1    5750 3650
+	0    1    1    0   
+$EndComp
+$EndSCHEMATC

@@ -1,0 +1,123 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L pspice:VSOURCE V2
+U 1 1 606C602E
+P 3300 4850
+F 0 "V2" H 3528 4896 50  0000 L CNN
+F 1 "dc 0 ac 1" H 3528 4805 50  0000 L CNN
+F 2 "" H 3300 4850 50  0001 C CNN
+F 3 "~" H 3300 4850 50  0001 C CNN
+	1    3300 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L pspice:C C1
+U 1 1 606C6723
+P 4950 5150
+F 0 "C1" H 5128 5196 50  0000 L CNN
+F 1 "1u" H 5128 5105 50  0000 L CNN
+F 2 "" H 4950 5150 50  0001 C CNN
+F 3 "~" H 4950 5150 50  0001 C CNN
+	1    4950 5150
+	1    0    0    -1  
+$EndComp
+$Comp
+L pspice:C C2
+U 1 1 606C6B97
+P 6300 5150
+F 0 "C2" H 6478 5196 50  0000 L CNN
+F 1 "100n" H 6478 5105 50  0000 L CNN
+F 2 "" H 6300 5150 50  0001 C CNN
+F 3 "~" H 6300 5150 50  0001 C CNN
+	1    6300 5150
+	1    0    0    -1  
+$EndComp
+$Comp
+L pspice:R R1
+U 1 1 606C7521
+P 4350 4450
+F 0 "R1" V 4145 4450 50  0000 C CNN
+F 1 "10k" V 4236 4450 50  0000 C CNN
+F 2 "" H 4350 4450 50  0001 C CNN
+F 3 "~" H 4350 4450 50  0001 C CNN
+	1    4350 4450
+	0    1    1    0   
+$EndComp
+$Comp
+L pspice:R R2
+U 1 1 606C7A4E
+P 5600 4450
+F 0 "R2" V 5395 4450 50  0000 C CNN
+F 1 "1k" V 5486 4450 50  0000 C CNN
+F 2 "" H 5600 4450 50  0001 C CNN
+F 3 "~" H 5600 4450 50  0001 C CNN
+	1    5600 4450
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3300 4550 3300 4450
+Wire Wire Line
+	3300 4450 4100 4450
+Wire Wire Line
+	4950 4900 4950 4450
+Wire Wire Line
+	4600 4450 4950 4450
+Connection ~ 4950 4450
+Wire Wire Line
+	4950 4450 5350 4450
+Wire Wire Line
+	5850 4450 6300 4450
+Wire Wire Line
+	6300 4450 6300 4900
+Wire Wire Line
+	6300 5400 4950 5400
+Wire Wire Line
+	4950 5400 3800 5400
+Wire Wire Line
+	3300 5400 3300 5150
+Connection ~ 4950 5400
+$Comp
+L pspice:0 #GND?
+U 1 1 606C9E91
+P 3800 5650
+F 0 "#GND?" H 3800 5550 50  0001 C CNN
+F 1 "0" H 3800 5739 50  0000 C CNN
+F 2 "" H 3800 5650 50  0001 C CNN
+F 3 "~" H 3800 5650 50  0001 C CNN
+	1    3800 5650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3800 5650 3800 5400
+Connection ~ 3800 5400
+Wire Wire Line
+	3800 5400 3300 5400
+Text GLabel 3100 4200 0    50   Input ~ 0
+IN
+Text GLabel 6650 4200 0    50   Output ~ 0
+OUT
+Wire Wire Line
+	3300 4450 3300 4200
+Wire Wire Line
+	3300 4200 3100 4200
+Connection ~ 3300 4450
+Wire Wire Line
+	6300 4450 6650 4450
+Wire Wire Line
+	6650 4450 6650 4200
+Connection ~ 6300 4450
+$EndSCHEMATC
